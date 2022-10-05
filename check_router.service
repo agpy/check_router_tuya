@@ -1,0 +1,11 @@
+[Unit]
+Description=Script is watching every 2 min for the state of the router and reboot frozen router via smart socket
+Wants=check_router.timer
+
+[Service]
+Type=oneshot
+ExecStart=/path/to/the/reload_smartsocket.py 
+
+
+[Install]
+WantedBy=multi-user.target
