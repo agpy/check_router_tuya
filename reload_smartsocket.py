@@ -18,7 +18,7 @@ def reload_smartsocket(plug_config):
     api.init(username,password,country_code,application)
     device_ids = api.get_all_devices()
     my_sw_obj = dict((i.name(),i) for i in device_ids if i.obj_type == 'switch' and i.name() == sw_device)
-    result = subprocess.run("ping -c 5 -n 77.88.8.1", shell=True, stdout=subprocess.PIPE, encoding='UTF-8')
+    result = subprocess.run(ping_perf, shell=True, stdout=subprocess.PIPE, encoding='UTF-8')
     dev_state = my_sw_obj[sw_device].state()
     print(dev_state, result.stdout)
 
