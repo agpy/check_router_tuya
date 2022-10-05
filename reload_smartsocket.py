@@ -9,7 +9,7 @@ import subprocess
 
 api = TuyaApi()
 
-def reload_smartplug(plug_config):
+def reload_smartsocket(plug_config):
 
     with open(plug_config) as config:
         data = json.load(config)
@@ -38,4 +38,4 @@ def reload_smartplug(plug_config):
 
 
 if __name__ == "__main__":
-    reload_smartplug('/home/phil/tuya/config.json')
+    reload_smartsocket('/home/phil/tuya/config.json')
