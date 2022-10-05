@@ -14,7 +14,7 @@ def reload_smartsocket(plug_config):
     with open(plug_config) as config:
         data = json.load(config)
 
-    username,password,country_code,application,sw_device = data['username'],data['password'],data['country_code'],data['application'],data['sw_device']
+    username,password,country_code,application,sw_device,ping_perf = data['username'],data['password'],data['country_code'],data['application'],data['sw_device'],data['ping_perf']
     api.init(username,password,country_code,application)
     device_ids = api.get_all_devices()
     my_sw_obj = dict((i.name(),i) for i in device_ids if i.obj_type == 'switch' and i.name() == sw_device)
