@@ -24,7 +24,7 @@ def reload_smartsocket(tuya_config):
 
     if result.returncode !=0 and dev_state == True:
         my_sw_obj[sw_device].turn_off()
-        print('Beeline is down!')
+        print('Router is down!')
         time.sleep(5)
         my_sw_obj[sw_device].turn_on()
         time.sleep(7)
