@@ -1,0 +1,9 @@
+[Unit]
+Description=Script is watching every 2 min for the state of the router and reboot frozen router via smart socket. 
+Wants=check_router.service
+
+[Timer]
+OnUnitActiveSec=2m
+
+[Install]
+WantedBy=timers.target
