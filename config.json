@@ -1,0 +1,6 @@
+{"username":"your username in the Tuya cloud",
+"password": "your password in the Tuya Cloud",
+"country_code":"your country code in the Tuya cloud",
+"application":"tuya",
+"sw_device":"your device name in the Tuya cloud",
+"ping_perf": "ping -c 5 -n 8.8.8.8"}
