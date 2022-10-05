@@ -7,11 +7,11 @@ import time
 import json
 import subprocess
 
-api = TuyaApi()
+api = Api()
 
-def reload_smartsocket(plug_config):
+def reload_smartsocket(tuya_config):
 
-    with open(plug_config) as config:
+    with open(tuya_config) as config:
         data = json.load(config)
 
     username,password,country_code,application,sw_device,ping_perf = data['username'],data['password'],data['country_code'],data['application'],data['sw_device'],data['ping_perf']
@@ -38,4 +38,4 @@ def reload_smartsocket(plug_config):
 
 
 if __name__ == "__main__":
-    reload_smartsocket('/home/phil/tuya/config.json')
+    reload_smartsocket('/home/to/tuya/config.json')
