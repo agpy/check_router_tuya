@@ -38,4 +38,4 @@ def reload_smartsocket(tuya_config):
 
 
 if __name__ == "__main__":
-    reload_smartsocket('/home/to/tuya/config.json')
+    reload_smartsocket('/path/to/tuya/config.json')
